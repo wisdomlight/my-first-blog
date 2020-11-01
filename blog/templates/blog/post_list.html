@@ -7,20 +7,14 @@
         <h1><a href="/">Sherab's Blog</a></h1>
     </div>
 
+    {% for post in posts %}
     <div>
-        <p>published: 31/10/2020 21:00 </p>
-        <h2><a href="">My first post</a></h2>
-        <p>This is the first blog I am writing in the vim in an HTML file I am creating. Soon I need to go and do my practice.</p>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
+    {% endfor %}
 
-    <div>
-        <h1><a href="/">Sherab's 2nd Blog</a></h1>
-    </div>
 
-    <div>
-        <p>published: 31/10/2020 21:16 </p>
-        <h2><a href="">My second  post</a></h2>
-        <p>This is the second blog I am writing in the vim in an HTML file I am creating. Soon I need to go and do my practice.</p>
-    </div>
     </body>
 </html>
